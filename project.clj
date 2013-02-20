@@ -12,4 +12,5 @@
                  [org.clojure/core.logic "0.7.5"]
                  [clojurewerkz/elastisch "1.0.2"]
                  [clojurewerkz/neocons "1.1.0-beta2"]
-                 [clj-gremlin "0.0.3"]])
+                 [clj-gremlin "0.0.3"]
+                 [gavagai "0.3.1"]])
