@@ -48,20 +48,41 @@
     [x y]
     (* y (/ x (gcf x y))))
 
-(defn rpad-num 
+(defn lpad-num 
   [w n] 
   (str (apply str 
               (repeat (- w (count (str n))) 
                       " ")) 
        n))
 
+(defn rpad-string 
+  [w s] 
+  (str s
+       (apply str 
+              (repeat (- w (count s)) 
+                      " "))))
+
 (defn print-num-rect 
   [nr]
   (let [w (apply max (map count (map str (flatten nr))))
-	    c (count (first nr))]
+	      c (count (first nr))]
     (->> nr
-		 (flatten)
-         (map #(rpad-num w %))
+		     (flatten)
+         (map #(lpad-num w %))
+         (partition c)
+         (map #(interpose " " %))
+         (map #(apply str %))
+         (interpose "\n")
+         (apply str)
+         (println))))
+
+(defn print-string-rect 
+  [sr]
+  (let [w (apply max (map count (map str (flatten sr))))
+        c (count (first sr))]
+    (->> sr
+         (flatten)
+         (map #(rpad-string w %))
          (partition c)
          (map #(interpose " " %))
          (map #(apply str %))
