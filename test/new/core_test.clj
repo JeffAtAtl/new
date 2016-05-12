@@ -2,6 +2,6 @@
   (:use clojure.test
         new.core))
 
-(deftest a-test
-  (testing "FIXME, I fail."
-    (is (= 0 1))))
+(deftest addition-test
+  (testing "Addition works."
+    (is (= 10 (+ 1 2 3 4)))))
