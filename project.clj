@@ -13,6 +13,5 @@
                  [clojurewerkz/elastisch "1.0.2"]
                  [clojurewerkz/neocons "1.1.0-beta2"]
                  [clj-gremlin "0.0.3"]
-                 [clj-blueprints2 "0.0.1" :exclusions [com.tinkerpop.blueprints/blueprints-core]]
                  [gavagai "0.3.1"]
                  [prismatic/plumbing "0.0.1"]])
